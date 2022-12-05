@@ -1,0 +1,48 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  position: inherit;
+}
+
+#navbar {
+  display: flex;
+  position: relative;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.75rem;
+  color: beige;
+  background-color: brown;
+  width: 100%;
+  height: auto;
+}
+#navbar-p {
+  font-weight: 800;
+}
+.nav-link {
+  color: aqua;
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px;
+}
+.nav-link:hover {
+  color: white;
+  background-color: goldenrod;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  #navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 1000px) {
+  #navbar {
+    position: absolute;
+    float: left;
+    width: 30%;
+  }
+}
