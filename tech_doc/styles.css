@@ -1,34 +1,110 @@
 html {
   box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
 }
 
 * {
-  position: inherit;
+  /* position: inherit; */
 }
+
+/* styling navbar and decendants */
 
 #navbar {
   display: flex;
-  position: relative;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: stretch;
+  flex-wrap: wrap;
+  /* position: relative; */
   font-family: "Courier New", Courier, monospace;
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: beige;
   background-color: brown;
   width: 100%;
   height: auto;
+  /* margin-bottom: 10px; */
 }
-#navbar-p {
+h1 {
+  display: block;
+  text-align: left;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  width: 100%;
+  color: blanchedalmond;
+  padding: 0 20px;
+}
+#navbar_p {
+  text-align: left;
   font-weight: 800;
+  color: antiquewhite;
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  border: 2px solid red;
+  /* position: absolute;
+  top: 0;
+  left: 0; */
 }
+#navbar_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: stretch;
+}
+
 .nav-link {
   color: aqua;
   text-decoration: none;
   display: inline-block;
-  padding: 5px;
+  padding: 10px;
+  margin: 5px;
 }
 .nav-link:hover {
   color: white;
   background-color: goldenrod;
   cursor: pointer;
+}
+
+/* styling main */
+
+#main-doc {
+  font-size: 1.5rem;
+  background-color: bisque;
+  width: 100vw;
+  height: auto;
+}
+
+.main-section {
+  width: 100%;
+  height: auto;
+  padding: 75px 50px;
+  margin: 0;
+  margin: 20px 10px;
+  background-color: #c0bcbc;
+}
+
+h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: chocolate;
+}
+p {
+  color: rgb(81, 75, 75);
+  text-align: justify;
+  text-indent: 2rem;
+}
+
+.parag_header {
+  font-weight: 800;
+  color: black;
+}
+
+#foot_div {
+  width: 100vw;
+  height: 100px;
+  background-color: darkgrey;
+  content: "";
 }
 
 @media (max-width: 500px) {
