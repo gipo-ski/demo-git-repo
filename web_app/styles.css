@@ -133,7 +133,11 @@ figcaption {
   height: auto;
   margin: 5rem auto;
   list-style: none;
-  /* list-style-image: url('fa-campfire'); */
+}
+i.fas {
+  color: var(--headerfooter-color);
+  font-size: 4rem;
+  padding: 1rem;
 }
 #skills-ul li {
   margin: 2rem auto;
@@ -145,7 +149,7 @@ figcaption {
   font-weight: 400;
   line-height: 2.5rem;
   letter-spacing: 0.25rem;
-  margin-top: 1rem;
+  margin: 1rem auto;
 }
 
 form {
@@ -157,7 +161,7 @@ form {
   border-radius: 0.5rem;
 }
 label {
-  font-size: 1.5rem;
+  font-size: 2rem;
   display: inline-block;
   text-align: left;
   width: 50%;
@@ -169,7 +173,7 @@ label {
 #email,
 #textarea {
   font-size: 1.5rem;
-  width: 100%;
+  width: 96%;
   display: inline-block;
   border: none;
   border-radius: 0.5rem;
@@ -177,7 +181,8 @@ label {
   margin: 1rem auto;
 }
 
-#submit {
+#submit,
+.select {
   display: block;
   font-size: 2rem;
   width: 60%;
@@ -218,7 +223,7 @@ p {
   padding: 2rem 1rem;
   background-color: var(--list-color);
   width: 20%;
-  min-height: 10rem;
+  min-height: 7.5rem;
   border-radius: 0.2rem;
 }
 article:hover {
@@ -244,7 +249,7 @@ article p {
 .em {
   display: block;
   font-size: 2.5rem;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 .article-p {
   font-size: 2.5rem;
