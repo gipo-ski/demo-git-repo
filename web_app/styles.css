@@ -9,6 +9,9 @@ Your product landing page should utilize CSS flexbox at least once */
   --section-color: darkgrey;
   --form-color: grey;
   --list-color: coral;
+  --h1-color: brown;
+  --blacktext-color: black;
+  --h2-fontfamily: "kristen ITC";
 }
 
 * {
@@ -23,12 +26,15 @@ html {
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--body-color);
-  width: 80vw;
+  width: 80%;
   margin: auto;
 }
+
+/* header */
+
 #header {
   background-color: var(--headerfooter-color);
-  width: 80vw;
+  width: 100%;
   height: auto;
   position: relative;
 }
@@ -42,61 +48,63 @@ h1,
   padding: 1rem;
 }
 #header h1 {
-  font-size: 4rem;
-  color: rgb(183, 57, 57);
+  font-size: 3rem;
+  color: var(--h1-color);
   max-width: 70%;
   position: absolute;
-  top: 5rem;
+  top: 7rem;
   left: 20%;
 }
 #header p {
-  font-size: 2.5rem;
-  color: black;
+  font-size: 2rem;
+  color: var(--blacktext-color);
   max-width: 70%;
   position: absolute;
-  top: 10rem;
+  top: 11rem;
   left: 20%;
 }
 
 #header-img {
-  max-height: 20rem;
+  max-width: 10%;
   display: inline-block;
-  margin: 2rem;
+  margin: 5rem 2rem 2rem 2rem;
 }
-
 #nav-bar {
-  max-width: fit-content;
-  display: block;
-}
-#navbar-ul {
-  max-width: calc(100vw - 20vw);
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: inherit;
+  width: 80%;
   position: fixed;
   top: 0;
-  left: 25%;
+}
+
+#nav-bar * {
+  width: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  flex-shrink: 3;
   margin: 0 auto;
 }
-li {
+
+#nav-bar li {
   max-width: inherit;
-  padding: 1rem 2rem;
   background-color: var(--list-color);
-  margin: 0 0.1rem;
+  border: 0.1rem solid var(--headerfooter-color);
 }
 .nav-link {
+  max-width: inherit;
   text-decoration: none;
   font-size: 1.5rem;
-  color: brown;
+  color: var(--h1-color);
   text-align: center;
-  padding: inherit;
+  padding: 0.5rem 0.5rem;
   margin: inherit;
 }
 .nav-link:hover {
-  color: black;
+  color: var(--blacktext-color);
 }
+
+/* main section */
 
 main {
   background-color: var(--main-color);
@@ -107,7 +115,7 @@ section {
 }
 .sub-heading {
   text-align: center;
-  font-family: "Courier New", Courier, monospace;
+  font-family: var(--h2-fontfamily);
   font-size: 2rem;
   padding: 1rem 0;
 }
@@ -137,7 +145,10 @@ figcaption {
 i.fas {
   color: var(--headerfooter-color);
   font-size: 4rem;
-  padding: 1rem;
+  padding: 2rem;
+}
+li {
+  background-color: var(--list-color);
 }
 #skills-ul li {
   margin: 2rem auto;
@@ -145,10 +156,12 @@ i.fas {
   font-weight: 600;
 }
 #skills-ul span.fa-solid {
+    max-width: inherit;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 2.5rem;
   letter-spacing: 0.25rem;
+  padding: 1rem 3rem;
   margin: 1rem auto;
 }
 
@@ -192,7 +205,8 @@ label {
   border-radius: 0.5rem;
   border: 0;
 }
-#submit:hover, .select:hover {
+#submit:hover,
+.select:hover {
   background-color: aqua;
   font-weight: 500;
   color: rgb(44, 43, 43);
@@ -204,6 +218,7 @@ p {
   text-align: center;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+
 #booking {
   display: flex;
   flex-wrap: wrap;
@@ -211,14 +226,11 @@ p {
   align-items: center;
   padding: 1rem;
 }
-#booking * {
-  /* border: 2px solid rebeccapurple; */
-}
 
 #booking p {
-  min-width: 100%;
+  width: 100%;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 #booking article {
   display: flex;
@@ -228,12 +240,10 @@ p {
   padding: 5rem 2rem 1rem 2rem;
   background-color: var(--list-color);
   width: 20%;
-  min-height: 5rem;
+  height: auto;
   border-radius: 0.2rem;
 }
-article:hover {
-  background-color: var(--section-color);
-}
+
 article a {
   text-decoration: none;
   text-align: center;
@@ -265,6 +275,7 @@ article p {
 }
 
 /* footer */
+
 footer {
   text-align: center;
   font-size: 1.5rem;
@@ -287,9 +298,47 @@ footer > a {
   font-size: 1rem;
 }
 
-/* @media only screen and (max-width: 720px) {
-  #nav-bar {
-    position: absolute;
-    top: 0;
+ @media only screen and (max-width: 720px) {
+  body {
+    background-color: black;
   }
-} */
+
+#nav-bar {
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+}
+
+  #header h1 {
+  font-size: 1.5rem;
+  color: var(--h1-color);
+  position: absolute;
+  top: 3rem;
+}
+#header p {
+  font-size: 1rem;
+  color: var(--blacktext-color);
+  position: absolute;
+  top: 5rem;
+}
+#video {
+  width: 60%;
+}
+form {
+  width: 40%;
+}
+#booking article {
+  flex-direction: column;
+  width: 60%;
+  margin: 0.5rem;
+}
+#footer-ul {
+ flex-direction: column;
+}
+#footer-ul li {
+  font-size: 1rem;
+  padding: 0.15rem 0.25rem;
+  margin: 0.5rem;
+}
+  
+} 
