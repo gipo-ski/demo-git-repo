@@ -64,12 +64,13 @@ h1 {
 }
 #projects h2 {
   font-size: 5rem;
+  font-weight: 300;
   color: var(--warmFont-color);
   padding: 5rem;
-  text-decoration: underline;
+  text-decoration: underline 0.25rem;
 }
-#projects p {
-  font-size: 3rem;
+#projects p:not(.project-div > p) {
+  font-size: 2.5rem;
   color: var(--darkFont-color);
   width: 75%;
   text-align: center;
@@ -82,44 +83,74 @@ h1 {
 #projects p a:hover {
   color: var(--darkFont-color);
   background-color: var(--navbarActive-color);
+  padding: 1rem 2.5rem;
 }
 .project-tile {
   display: flex;
   flex-wrap: wrap;
-  padding: 15rem;
+  padding: 10rem;
 }
 
 .project-div {
-  width: 40%;
-  height: 100%;
-  background-color: var(--navbarActive-color);
-  margin: 5rem;
-  padding: 2.5rem 0 10rem 0;
-  border: 1rem solid red;
+  width: 35%;
+  margin: 5rem auto;
+  border-bottom: 1rem solid var(--lightFont-color);
 }
 .project-div figure {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  margin: 0;
+  padding: 0;
+    object-fit: fill;
+}
+.project-div figure a {
+  text-decoration: none;
+  color: var(--darkFont-color);
+  text-align: center;
+}
+.project-div figure img {
   width: 100%;
   height: auto;
+  margin: 0;
 }
-.project-div img {
-  width: inherit;
-  height: auto;
+.project-div figcaption {
+  margin: 0;
+  font-size: 2rem;
+  padding: 2rem 0;
+}
+
+.project-div #figcaption1 {
+  background-color: var(--welcomeSection-color);
+  color: var(--lightFont-color);
+}
+.project-div #figcaption2 {
+  background-color: rgb(221, 142, 45);
+  color: var(--darkFont-color);
+}
+.project-div #figcaption3 {
+  background-color: brown;
+  color: var(--lightFont-color);
+}
+.project-div #figcaption4 {
+  background-color: pink;
+  color: var(--darkFont-color);
 }
 .project-div:hover {
   outline: 0.5rem dashed var(--lightFont-color);
   outline-offset: 1rem;
   cursor: pointer;
 }
-.project-div p {
-  font-size: 1rem;
-}
-.project-div a {
-  font-size: 3rem;
-  text-decoration: none;
+.project-div > p {
+  width: 60%;
+  text-align: justify;
+  font-size: 2rem;
   color: var(--darkFont-color);
-  text-align: center;
-  padding: 1rem 3rem;
+  padding: 2rem;
+  margin: 0 auto;
+
 }
+
 #profile {
   width: 100%;
   height: 100%;
