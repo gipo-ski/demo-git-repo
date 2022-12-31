@@ -43,7 +43,7 @@ html {
 }
 #welcome-section {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--welcomeSection-color);
   font-size: 5rem;
   color: var(--lightFont-color);
@@ -51,16 +51,18 @@ html {
 }
 
 h1 {
-  padding-top: 30rem;
+  padding-top: 35rem;
 }
 #ws-p {
-  padding-bottom: 30rem;
+  padding-bottom: 40rem;
   color: var(--lightFont-color);
 }
 #projects {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   background-color: var(--projectSection-color);
+  margin-top: 0;
+  padding-top: 10rem;
 }
 #projects h2 {
   font-size: 5rem;
@@ -89,6 +91,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   padding: 10rem;
+  min-height: inherit;
 }
 
 .project-div {
@@ -102,7 +105,7 @@ h1 {
   height: auto;
   margin: 0;
   padding: 0;
-    object-fit: fill;
+  object-fit: fill;
 }
 .project-div figure a {
   text-decoration: none;
@@ -148,14 +151,13 @@ h1 {
   color: var(--darkFont-color);
   padding: 2rem;
   margin: 0 auto;
-
 }
 
 #profile {
   width: 100%;
   height: 100%;
   background-color: var(--profileLinkSection-color);
-  padding: 10rem 0;
+  padding: 20rem 0;
 }
 #profile-link {
   text-decoration: none;
@@ -168,5 +170,46 @@ h1 {
 @media screen and (max-width: 600px) {
   #navbar {
     width: 100%;
+  }
+  #navbar a {
+    font-size: 2rem;
+    padding: 1rem 5rem;
+  }
+  #welcome-section {
+    width: 100%;
+    min-height: 100vh;
+    font-size: 3rem;
+  }
+  h1 {
+    padding-top: 30rem;
+  }
+  #ws-p {
+    padding-bottom: 30rem;
+  }
+  #projects {
+    margin-top: 0;
+    background-color: rgb(94, 117, 166);
+  }
+  #projects h2 {
+    font-size: 3rem;
+    font-weight: 200;
+    padding: 3rem;
+    text-decoration: underline 0.2rem;
+  }
+  #projects p:not(.project-div > p) {
+    font-size: 2rem;
+  }
+
+  .project-tile {
+    padding: 5rem;
+  }
+
+  .project-div {
+    margin: 3rem auto;
+  }
+
+  .project-div figcaption {
+    font-size: 1.5rem;
+    padding: 2rem 0;
   }
 }
