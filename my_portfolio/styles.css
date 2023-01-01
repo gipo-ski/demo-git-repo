@@ -58,6 +58,7 @@ h1 {
   color: var(--lightFont-color);
 }
 #projects {
+  font-size: 1.5rem;
   width: 100%;
   min-height: 100vh;
   background-color: var(--projectSection-color);
@@ -96,13 +97,14 @@ h1 {
 
 .project-div {
   width: 35%;
+  height: 100%;
   margin: 5rem auto;
   border-bottom: 1rem solid var(--lightFont-color);
 }
 .project-div figure {
   width: -moz-fit-content;
-  width: fit-content;
-  height: auto;
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
   object-fit: fill;
@@ -155,7 +157,7 @@ h1 {
 
 #profile {
   width: 100%;
-  height: 100%;
+  height: 10%;
   background-color: var(--profileLinkSection-color);
   padding: 20rem 0;
 }
@@ -211,5 +213,11 @@ h1 {
   .project-div figcaption {
     font-size: 1.5rem;
     padding: 2rem 0;
+  }
+  .project-div > p {
+    width: 80%;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem;
   }
 }
